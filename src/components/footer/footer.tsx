@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer-wrapper">
       <div className="footer-container">
         <div className="footer-logo-nav-wrapper">
-          <div>Logo</div>
+          <div>Logo goes here</div>
           <div>Footer Nav Menu</div>
           <div>Copyright info</div>
         </div>
