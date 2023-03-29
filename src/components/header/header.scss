@@ -1,0 +1,13 @@
+.header-wrapper {
+  background: #3259f1;
+  height: 70px;
+  padding: 0 20px;
+}
+
+.header-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  margin: auto;
+}
