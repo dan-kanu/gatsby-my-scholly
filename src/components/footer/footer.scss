@@ -11,6 +11,9 @@
   justify-content: center;
   width: 100%;
   text-align: center;
+  max-width: var(--content-max-width);
+  margin: auto;
+
   @media screen and (min-width: 768px) {
     flex-direction: row;
     justify-content: space-between;

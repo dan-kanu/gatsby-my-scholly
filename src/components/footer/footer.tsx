@@ -1,4 +1,5 @@
 import React from "react"
+import Logo from "../logo"
 import "./footer.scss"
 
 const Footer = () => {
@@ -6,7 +7,9 @@ const Footer = () => {
     <footer className="footer-wrapper">
       <div className="footer-container">
         <div className="footer-logo-nav-wrapper">
-          <div>Logo goes here</div>
+          <div>
+            <Logo />
+          </div>
           <div>Footer Nav Menu</div>
           <div>Copyright info</div>
         </div>

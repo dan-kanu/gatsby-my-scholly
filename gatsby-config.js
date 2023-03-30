@@ -16,6 +16,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // {
     //   resolve: `gatsby-plugin-sass`,
     //   options: {
@@ -51,7 +53,8 @@ module.exports = {
         // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
         // This feature is untested for sites hosted on Wordpress.com
         useACF: true,
-        url: "https://stage.myscholly.com/graphql",
+        // url: "https://stage.myscholly.com/graphql",
+        url: "http://the-tanager.local/graphql",
       },
     },
     `gatsby-plugin-sharp`,
