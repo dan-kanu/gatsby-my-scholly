@@ -1,21 +1,32 @@
 import React from "react"
 import { graphql } from "gatsby"
+import BlogCard from "../components/blog-card/blog-card"
+import Layout from "../components/layout"
+import BlogPosts from "../components/blog-posts/blog-posts"
 
 const BlogPage = ({ data }) => {
   const posts = data.allWpPost.edges
 
   return (
-    <div>
-      <h1>Blog Posts</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post?.id}>
-            {post?.node.title}
-            {console.log("posts", post)}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Layout>
+      <h1>Scholly’s Scholarship and College Finance Blog</h1>
+      <div className="blog-container">
+        {posts.map(post => {
+          return (
+            <BlogCard
+              imageSrc={
+                post?.node?.featuredImage?.node?.localFile?.childImageSharp
+                  ?.fluid?.src
+              }
+              link={post?.node.uri}
+              title={post?.node.title}
+              description={"Read More"}
+            />
+          )
+        })}
+      </div>
+      <div></div>
+    </Layout>
   )
 }
 
@@ -26,9 +37,20 @@ export const query = graphql`
     allWpPost {
       edges {
         node {
-          id
-          date
           title
+          id
+          uri
+          featuredImage {
+            node {
+              localFile {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

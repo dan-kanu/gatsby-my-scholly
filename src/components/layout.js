@@ -27,11 +27,7 @@ const Layout = ({ children }) => {
     <div className="layout-container">
       <div className="layout-content">
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <div
-          style={{
-            padding: `var(--size-gutter)`,
-          }}
-        >
+        <div className="layout-children-wrapper">
           <main>{children}</main>
         </div>
       </div>
