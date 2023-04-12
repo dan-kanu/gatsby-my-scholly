@@ -5,11 +5,13 @@ import Layout from "../components/layout"
 import BlogPosts from "../components/blog-posts/blog-posts"
 
 const BlogPage = ({ data }) => {
-  const posts = data.allWpPost.edges
+  const posts = data?.allWpPost?.edges
 
   return (
     <Layout>
-      <h1>Scholly’s Scholarship and College Finance Blog</h1>
+      <div className="blog-page-header-container">
+        <h1>Scholly’s Scholarship and College Finance Blog</h1>
+      </div>
       <div className="blog-container">
         {posts.map(post => {
           return (
@@ -18,8 +20,8 @@ const BlogPage = ({ data }) => {
                 post?.node?.featuredImage?.node?.localFile?.childImageSharp
                   ?.fluid?.src
               }
-              link={post?.node.uri}
-              title={post?.node.title}
+              link={post?.node?.uri}
+              title={post?.node?.title}
               description={"Read More"}
             />
           )

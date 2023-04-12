@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import PostSidebar from "../components/post-sidebar/post-sidebar"
 
 const Post = ({ data }) => {
-  const post = data.wpPost
+  const post = data?.wpPost
 
   console.log("data", data)
   return (
@@ -16,7 +16,7 @@ const Post = ({ data }) => {
         }}
       >
         <div>
-          <h1>{post.title}</h1>
+          <h1>{post?.title}</h1>
         </div>
       </div>
       <div className="single-post-content-wrapper ">

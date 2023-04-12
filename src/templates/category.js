@@ -2,18 +2,20 @@ import { graphql, PageProps } from "gatsby"
 import * as React from "react"
 
 const Category = ({ data }) => {
-  const posts = data.allWpPost.edges
+  const posts = data?.allWpPost?.edges
 
   return (
     <div>
-      {posts.map(({ node }) => (
-        <div key={node.id}>
-          <h2>{node.title}</h2>
+      {posts?.map(({ node }) => (
+        <div key={node?.id}>
+          <h2>{node?.title}</h2>
           <img
-            src={node.featuredImage.node.localFile.childImageSharp.fluid.src}
+            src={
+              node?.featuredImage?.node?.localFile?.childImageSharp?.fluid?.src
+            }
             alt=""
           />
-          <div dangerouslySetInnerHTML={{ __html: node.content }} />
+          <div dangerouslySetInnerHTML={{ __html: node?.content }} />
         </div>
       ))}
     </div>

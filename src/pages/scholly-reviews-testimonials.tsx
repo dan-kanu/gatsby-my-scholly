@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const PartnerWithUs = () => {
+const Tesimonials = () => {
   return (
     <Layout>
       <div className="blog-page-header-container">
-        <h1>Partner With Us</h1>
+        <h1>Testimonials</h1>
       </div>
     </Layout>
   )
 }
-export default PartnerWithUs
+export default Tesimonials

@@ -21,13 +21,13 @@ const Header = ({ siteTitle }) => {
           </div>
           <div className="nav-container">
             <ul className="header-desktop-nav-menu">
-              {menu?.wpMenu.menuItems.nodes.map((menu, index) => {
+              {menu?.wpMenu?.menuItems?.nodes?.map((menu, index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <Link
                       to={menu?.uri}
                       className={
-                        location.pathname === menu?.uri ? "active" : ""
+                        location?.pathname === menu?.uri ? "active" : ""
                       }
                     >
                       {menu?.label}

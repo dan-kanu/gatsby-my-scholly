@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 const Scholarships: React.FC = () => {
   return (
     <Layout>
-      <div>
-        <h1>Partner With Us</h1>
+      <div className="blog-page-header-container">
+        <h1>Scholarships</h1>
       </div>
     </Layout>
   )

@@ -19,7 +19,14 @@ const BlogCard: React.FC<CardProps> = ({
   return (
     <div className="blog-card-container">
       <div className="blog-card-image-container">
-        <img src={imageSrc} alt={title} className="blog-card-image" />
+        <img
+          src={
+            imageSrc ||
+            "https://myscholly.com/wp-content/uploads/2023/03/Group-18532.png"
+          }
+          alt={title}
+          className="blog-card-image"
+        />
       </div>
       <div className="blog-card-content">
         <p className="blog-card-title">{title}</p>
